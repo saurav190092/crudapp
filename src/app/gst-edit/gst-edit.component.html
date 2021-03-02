@@ -1,0 +1,38 @@
+<!-- main app container -->
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <h3>Angular 7 Reactive Form Validation</h3>
+              <form [formGroup]="registerForm">
+                  <div class="form-group">
+                      <label>First Name</label>
+                      <input type="text" formControlName="firstName" class="form-control" #firstName [(ngModel)]="form.firstName"/>
+                  </div>
+                  <div class="form-group">
+                      <label>Last Name</label>
+                      <input type="text" formControlName="lastName" class="form-control" #lastName [(ngModel)]="form.lastName"/>
+                  </div>
+                  <div class="form-group">
+                      <label>Email</label>
+                      <input type="text" formControlName="email" class="form-control" #email [(ngModel)]="form.email"/>
+
+                  </div>
+                  <div class="form-group">
+                      <label>Password</label>
+                      <input type="password" formControlName="password" class="form-control" #password [(ngModel)]="form.password" />
+
+                  </div>
+                  <div class="form-group">
+                      <label>Confirm Password</label>
+                      <input type="password" formControlName="confirmPassword" class="form-control" #confirmPassword [(ngModel)]="form.confirmPassword" />
+
+                  </div>
+                  <div class="form-group">
+                      <button (click)="updateForm(firstName,lastName,email,password,confirmPassword);" class="btn btn-primary">Update Form</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
